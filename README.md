@@ -1,12 +1,56 @@
-# React + Vite
+# ⏳ React Timer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and interactive timer app built with React, where users can set a custom countdown by editing the hours, minutes, and seconds directly. The app includes intuitive controls to start, pause, and reset the timer. All values are editable and auto-padded for a polished digital clock experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Click-to-edit hours, minutes, and seconds individually
+- Real-time countdown with Start/Pause toggle
+- Reset button to restore the original set time
+- Inputs auto-format to always show 2 digits (e.g., 5 → 05)
+- Editing any field auto-pauses the timer
+- Simple and minimal UI
 
-## Expanding the ESLint configuration
+## 🧰 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js (functional components)
+- JavaScript (ES6+)
+- CSS (custom styles via index.css)
+
+## ⚛️ React Concepts Used
+
+| Concept              | Description                                               |
+|----------------------|-----------------------------------------------------------|
+| useState()           | Tracks timer value, edit state, and running status        |
+| useEffect()          | Handles countdown logic with timer interval               |
+| Controlled Inputs    | Lets users edit each field with live updates              |
+| Conditional Rendering| Switches between text display and input field             |
+| Component Props      | Passes control handlers and data between components       |
+
+## 🔄 Countdown Logic
+
+- Timer starts ticking down when Start is pressed
+- Every second, the timer decreases by 1 using setInterval
+- When it reaches 0, it auto-pauses
+- Timer pauses if you start editing any field
+- On save, the updated time is recalculated and displayed
+
+## ✏️ Editable Time Fields
+
+- Each of the HH, MM, and SS values can be clicked to enter edit mode
+- Input only accepts 2-digit numbers
+- On blur (clicking away), the value is saved and formatted
+- Uses .padStart(2, '0') to ensure clean time display
+
+## 🧩 Components Overview
+
+- App.jsx: Main logic, state, and layout
+- TimerDisplay.jsx: Shows the HH : MM : SS layout
+- EditableUnit.jsx: Handles display vs input field toggle
+- TimerControls.jsx: Start/Pause and Reset buttons
+- Utility files: formatTime, calculateTime, validateInput
+
+## 📄 License
+
+Free to use for personal or educational projects.
+

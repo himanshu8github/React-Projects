@@ -1,0 +1,77 @@
+/* === Global Reset === */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* === App Container === */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* === Heading === */
+.heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* === Timer Display === */
+.timer-display {
+  font-size: 3rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* === Input/Text Styling === */
+.edit-field {
+  cursor: pointer;
+  min-width: 40px;
+}
+
+.input-field {
+  width: 40px;
+  text-align: center;
+  font-size: 2rem;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* === Buttons === */
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.control-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #0056b3;
+}
+
+.reset-btn {
+  background-color: #dc3545;
+}
+
+.reset-btn:hover {
+  background-color: #a71d2a;
+}
